@@ -3,6 +3,13 @@
 
 A comprehensive React-based financial dashboard that provides real-time monitoring of various financial metrics including stock indices, cryptocurrency prices, interest rates, and banking metrics. Built with React, Vite, and Styled Components, this application offers an intuitive and visually appealing interface for tracking financial data.
 
+![junie-screenshot-1](https://github.com/user-attachments/assets/e9ccb725-87c7-4492-9c11-7b5cd0c23ac5)
+
+![junie-screenshot-2](https://github.com/user-attachments/assets/c3acdb6e-33bf-4167-ad49-00f5437afdd3)
+
+![junie-screenshot-3](https://github.com/user-attachments/assets/8c2395d0-42fa-4162-8c85-b48a2503430c)
+
+
 ## Features
 
 - **Stock Indices Tracking**: Monitor major indices like NASDAQ, S&P 500, Dow Jones, and Russell 2000
