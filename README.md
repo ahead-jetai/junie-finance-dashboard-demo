@@ -3,6 +3,10 @@
 
 A comprehensive React-based financial dashboard that provides real-time monitoring of various financial metrics including stock indices, cryptocurrency prices, interest rates, and banking metrics. Built with React, Vite, and Styled Components, this application offers an intuitive and visually appealing interface for tracking financial data.
 
+## Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](https://junie-finance-dashboard-demo.vercel.app/)
+
 ![junie-screenshot-1](https://github.com/user-attachments/assets/e9ccb725-87c7-4492-9c11-7b5cd0c23ac5)
 
 ![junie-screenshot-2](https://github.com/user-attachments/assets/c3acdb6e-33bf-4167-ad49-00f5437afdd3)
