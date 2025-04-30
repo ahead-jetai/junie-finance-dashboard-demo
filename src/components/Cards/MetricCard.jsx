@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { FiDollarSign, FiActivity } from 'react-icons/fi';
 import Card from './Card';
 import LineChart from '../Charts/LineChart';
-import { timeLabels } from '../../data/mockData';
 
 // Styled components
 const ChartContainer = styled.div`
@@ -31,7 +30,7 @@ const formatLargeNumber = (value) => {
 };
 
 // MetricCard component
-const MetricCard = ({ title, data, color, isTransaction = false }) => {
+const MetricCard = ({ title, data, color, isTransaction = false, timeLabels }) => {
   // Prepare chart data
   const chartData = data.history.map((historyValue, index) => {
     // Convert to number if it's not already
@@ -40,7 +39,7 @@ const MetricCard = ({ title, data, color, isTransaction = false }) => {
     const safeValue = isNaN(numValue) ? 0 : numValue;
 
     return {
-      name: timeLabels[index] || `Day ${index + 1}`,
+      name: (timeLabels && timeLabels[index]) || `Day ${index + 1}`,
       value: safeValue
     };
   });

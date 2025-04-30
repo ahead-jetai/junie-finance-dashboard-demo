@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { FiPercent } from 'react-icons/fi';
 import Card from './Card';
 import LineChart from '../Charts/LineChart';
-import { timeLabels } from '../../data/mockData';
 
 // Styled components
 const ChartContainer = styled.div`
@@ -26,9 +25,9 @@ const formatPercentage = (value) => {
 };
 
 // RateCard component
-const RateCard = ({ title, data, color }) => {
+const RateCard = ({ title, data, color, timeLabels }) => {
   // Prepare chart data
-  const chartData = timeLabels.map((label, index) => {
+  const chartData = timeLabels ? timeLabels.map((label, index) => {
     // Get the value from history or default to 0
     const historyValue = data.history[index];
     // Convert to number if it's not already
@@ -40,7 +39,7 @@ const RateCard = ({ title, data, color }) => {
       name: label,
       value: safeValue
     };
-  });
+  }) : [];
 
   // Determine color based on change (for interest rates, negative change is good)
   const isPositive = data.change < 0;

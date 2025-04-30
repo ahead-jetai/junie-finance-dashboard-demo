@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { FiTrendingUp, FiTrendingDown } from 'react-icons/fi';
 import Card from './Card';
 import LineChart from '../Charts/LineChart';
-import { timeLabels } from '../../data/mockData';
 
 // Styled components
 const ChartContainer = styled.div`
@@ -22,12 +21,12 @@ const formatCurrency = (value) => {
 };
 
 // StockCard component
-const StockCard = ({ title, data, color }) => {
+const StockCard = ({ title, data, color, timeLabels }) => {
   // Prepare chart data
-  const chartData = timeLabels.map((label, index) => ({
+  const chartData = timeLabels ? timeLabels.map((label, index) => ({
     name: label,
     value: data.history[index]
-  }));
+  })) : [];
 
   // Determine icon based on change
   const icon = data.change >= 0 ? <FiTrendingUp size={20} /> : <FiTrendingDown size={20} />;
