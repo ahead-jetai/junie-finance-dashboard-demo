@@ -1,0 +1,425 @@
+
+> react-finance-dashboard@0.0.0 test
+> jest
+ PASS  src/__tests__/components/Cards/StockCard.test.jsx
+  ● Console
+    console.error
+      React does not recognize the `iconBg` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `iconbg` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      52 | // Wrapper component to provide theme
+      53 | const renderWithTheme = (ui) => {
+    > 54 |   return render(
+         |                ^
+      55 |     <ThemeProvider theme={theme}>
+      56 |       {ui}
+      57 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:54:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:75:5)
+    console.error
+      React does not recognize the `isPositive` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `ispositive` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      52 | // Wrapper component to provide theme
+      53 | const renderWithTheme = (ui) => {
+    > 54 |   return render(
+         |                ^
+      55 |     <ThemeProvider theme={theme}>
+      56 |       {ui}
+      57 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:54:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:75:5)
+    console.error
+      React does not recognize the `isNegative` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `isnegative` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      52 | // Wrapper component to provide theme
+      53 | const renderWithTheme = (ui) => {
+    > 54 |   return render(
+         |                ^
+      55 |     <ThemeProvider theme={theme}>
+      56 |       {ui}
+      57 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:54:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:75:5)
+    console.error
+      Received `true` for a non-boolean attribute `ispositive`.
+
+      If you want to write it to the DOM, pass a string instead: ispositive="true" or ispositive={value.toString()}.
+      52 | // Wrapper component to provide theme
+      53 | const renderWithTheme = (ui) => {
+    > 54 |   return render(
+         |                ^
+      55 |     <ThemeProvider theme={theme}>
+      56 |       {ui}
+      57 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3078:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:54:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:75:5)
+    console.error
+      Received `false` for a non-boolean attribute `isnegative`.
+
+      If you want to write it to the DOM, pass a string instead: isnegative="false" or isnegative={value.toString()}.
+
+      If you used to conditionally omit it with isnegative={condition && value}, pass isnegative={condition ? value : undefined} instead.
+      52 | // Wrapper component to provide theme
+      53 | const renderWithTheme = (ui) => {
+    > 54 |   return render(
+         |                ^
+      55 |     <ThemeProvider theme={theme}>
+      56 |       {ui}
+      57 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3086:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:54:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/StockCard.test.jsx:75:5)
+ PASS  src/__tests__/simple.test.js
+ PASS  src/__tests__/components/Cards/RateCard.test.jsx
+  ● Console
+    console.error
+      React does not recognize the `iconBg` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `iconbg` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      53 | // Wrapper component to provide theme
+      54 | const renderWithTheme = (ui) => {
+    > 55 |   return render(
+         |                ^
+      56 |     <ThemeProvider theme={theme}>
+      57 |       {ui}
+      58 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:55:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:82:5)
+    console.error
+      React does not recognize the `isPositive` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `ispositive` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      53 | // Wrapper component to provide theme
+      54 | const renderWithTheme = (ui) => {
+    > 55 |   return render(
+         |                ^
+      56 |     <ThemeProvider theme={theme}>
+      57 |       {ui}
+      58 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:55:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:82:5)
+    console.error
+      React does not recognize the `isNegative` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `isnegative` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      53 | // Wrapper component to provide theme
+      54 | const renderWithTheme = (ui) => {
+    > 55 |   return render(
+         |                ^
+      56 |     <ThemeProvider theme={theme}>
+      57 |       {ui}
+      58 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:55:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:82:5)
+    console.error
+      Received `false` for a non-boolean attribute `ispositive`.
+
+      If you want to write it to the DOM, pass a string instead: ispositive="false" or ispositive={value.toString()}.
+
+      If you used to conditionally omit it with ispositive={condition && value}, pass ispositive={condition ? value : undefined} instead.
+      53 | // Wrapper component to provide theme
+      54 | const renderWithTheme = (ui) => {
+    > 55 |   return render(
+         |                ^
+      56 |     <ThemeProvider theme={theme}>
+      57 |       {ui}
+      58 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3086:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:55:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:82:5)
+    console.error
+      Received `true` for a non-boolean attribute `isnegative`.
+
+      If you want to write it to the DOM, pass a string instead: isnegative="true" or isnegative={value.toString()}.
+      53 | // Wrapper component to provide theme
+      54 | const renderWithTheme = (ui) => {
+    > 55 |   return render(
+         |                ^
+      56 |     <ThemeProvider theme={theme}>
+      57 |       {ui}
+      58 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3078:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:55:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/RateCard.test.jsx:82:5)
+ PASS  src/__tests__/components/Cards/Card.test.jsx
+  ● Console
+    console.error
+      React does not recognize the `isPositive` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `ispositive` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      36 | // Wrapper component to provide theme
+      37 | const renderWithTheme = (ui) => {
+    > 38 |   return render(
+         |                ^
+      39 |     <ThemeProvider theme={theme}>
+      40 |       {ui}
+      41 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:38:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:61:5)
+    console.error
+      React does not recognize the `isNegative` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `isnegative` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+      36 | // Wrapper component to provide theme
+      37 | const renderWithTheme = (ui) => {
+    > 38 |   return render(
+         |                ^
+      39 |     <ThemeProvider theme={theme}>
+      40 |       {ui}
+      41 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3009:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:38:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:61:5)
+    console.error
+      Received `true` for a non-boolean attribute `ispositive`.
+
+      If you want to write it to the DOM, pass a string instead: ispositive="true" or ispositive={value.toString()}.
+      36 | // Wrapper component to provide theme
+      37 | const renderWithTheme = (ui) => {
+    > 38 |   return render(
+         |                ^
+      39 |     <ThemeProvider theme={theme}>
+      40 |       {ui}
+      41 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3078:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:38:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:61:5)
+    console.error
+      Received `false` for a non-boolean attribute `isnegative`.
+
+      If you want to write it to the DOM, pass a string instead: isnegative="false" or isnegative={value.toString()}.
+
+      If you used to conditionally omit it with isnegative={condition && value}, pass isnegative={condition ? value : undefined} instead.
+      36 | // Wrapper component to provide theme
+      37 | const renderWithTheme = (ui) => {
+    > 38 |   return render(
+         |                ^
+      39 |     <ThemeProvider theme={theme}>
+      40 |       {ui}
+      41 |     </ThemeProvider>
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3086:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3154:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:17117:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:17741:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:11391:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15268:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:15149:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:14936:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:14419:13)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:16216:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:38:16)
+      at Object.renderWithTheme (src/__tests__/components/Cards/Card.test.jsx:61:5)
+Test Suites: 4 passed, 4 total
+Tests:       19 passed, 19 total
+Snapshots:   0 total
+Time:        0.824 s, estimated 1 s
+Ran all test suites.

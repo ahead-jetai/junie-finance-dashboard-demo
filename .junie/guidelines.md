@@ -1,170 +1,192 @@
+# React Finance Dashboard - Development Guidelines
 
-# React Finance Dashboard Creation Prompt
+## Build/Configuration Instructions
 
-## Overview
-This prompt will guide you through creating a financial dashboard application using React. The dashboard will display various financial metrics including stock indices, crypto indices, interest rates, banking metrics, and market overview. The application will have a dark theme with a clean, modern UI and interactive components.
+### Development Setup
+- **Build Tool**: Vite 6.3.1 with React plugin
+- **Node.js**: Uses ES modules (`"type": "module"` in package.json)
+- **React Version**: 19.0.0 with React DOM 19.0.0
 
-## Step 1: Project Setup
-1. Create a new React project using Vite:
-    - Use the command: `npm create vite@latest react-finance-dashboard -- --template react`
-    - Navigate to the project directory: `cd react-finance-dashboard`
-    - Install dependencies: `npm install`
+### Available Scripts
+```bash
+npm run dev      # Start development server with HMR
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
+npm test         # Run Jest tests
+npm run test:coverage  # Run tests with coverage report
+```
 
-2. Install required packages:
-    - Styled Components: `npm install styled-components`
-    - React Icons: `npm install react-icons`
-    - Recharts: `npm install recharts`
+### Vite Configuration
+- HMR overlay enabled for error display
+- Info-level logging enabled
+- React plugin configured for JSX transformation
 
-3. Project structure:
-   ```
-   src/
-   ├── components/
-   │   ├── Cards/
-   │   │   ├── Card.jsx
-   │   │   ├── StockCard.jsx
-   │   │   ├── RateCard.jsx
-   │   │   └── MetricCard.jsx
-   │   ├── Charts/
-   │   │   └── LineChart.jsx
-   │   └── Dashboard/
-   │       └── Dashboard.jsx
-   ├── data/
-   │   └── mockData.js
-   ├── App.jsx
-   ├── App.css
-   ├── theme.js
-   ├── main.jsx
-   └── index.css
-   ```
+### Key Dependencies
+- **Styling**: styled-components 6.1.17
+- **Charts**: recharts 2.15.3
+- **Icons**: react-icons 5.5.0
+- **Analytics**: @vercel/analytics 1.5.0
 
-## Step 2: Theme Configuration
-Create a theme.js file in the src directory with the following content:
+## Testing Information
 
-1. Define a dark theme with:
-    - Color palette (primary, secondary, success, warning, danger, info)
-    - Background colors (primary, secondary, card, elevated)
-    - Text colors (primary, secondary, tertiary, inverse)
-    - Border colors (light, medium, strong)
-    - Chart colors (green, red, blue, purple, yellow, teal, orange)
-    - Spacing (xs, sm, md, lg, xl, xxl)
-    - Border radius (sm, md, lg, xl, round)
-    - Shadows (sm, md, lg, xl)
+### Test Framework Setup
+- **Test Runner**: Jest 29.7.0 with jsdom environment
+- **Testing Library**: @testing-library/react 15.0.0 with jest-dom matchers
+- **Babel**: babel-jest for JS/JSX transformation
 
-2. Create global styles using styled-components' createGlobalStyle
-    - Reset CSS (box-sizing, margin, padding)
-    - Set font family to Inter with system fallbacks
-    - Set background color to dark theme primary background
-    - Set text color to theme primary text color
-    - Define typography styles for headings and paragraphs
+### Jest Configuration Highlights
+```javascript
+// jest.config.js
+{
+  testEnvironment: 'jsdom',
+  transform: { '^.+\\.(js|jsx)$': 'babel-jest' },
+  moduleNameMapper: {
+    '^.+\\.svg$': '<rootDir>/src/__mocks__/svgMock.js',
+    '^.+\\.(css|less|scss)$': 'identity-obj-proxy'
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/main.jsx']
+}
+```
 
-## Step 3: Mock Data Creation
-Create a mockData.js file in the src/data directory with the following data sets:
+### Running Tests
+```bash
+# Run all tests
+npm test
 
-1. Stock Indices:
-    - NASDAQ Composite
-    - S&P 500
-    - Dow Jones Industrial Average
-    - Russell 2000
+# Run specific test file
+npm test -- src/__tests__/example.test.js
 
-2. Crypto Indices:
-    - Bitcoin (BTC)
-    - Ethereum (ETH)
-    - Solana (SOL)
-    - Crypto Index
+# Run with coverage
+npm run test:coverage
 
-3. Interest Rates:
-    - 30-Year Fixed Mortgage Rate
-    - 10-Year Treasury Yield
-    - 2-Year Treasury Yield
-    - Average Auto Loan Rate
+# Watch mode (add --watch flag)
+npm test -- --watch
+```
 
-4. Daily Banking Metrics:
-    - Daily Deposits
-    - Daily Withdrawals
-    - Day Over Day Profit
-    - Total Transactions
+### Test Structure and Patterns
 
-5. Market Overview:
-    - Top Gainers (3 stocks)
-    - Top Losers (3 stocks)
-    - Market Sentiment (bullish, neutral, bearish percentages)
+#### Component Testing with Styled Components
+```javascript
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 
-6. Time Labels for charts (last 6 days: Mon, Tue, Wed, Thu, Fri, Today)
+// Mock theme for testing
+const mockTheme = {
+  background: { card: '#ffffff' },
+  borderRadius: { md: '8px' },
+  text: { primary: '#000000' }
+};
 
-## Step 4: Component Implementation
+// Wrapper for styled components
+const renderWithTheme = (ui) => {
+  return render(
+    <ThemeProvider theme={mockTheme}>
+      {ui}
+    </ThemeProvider>
+  );
+};
 
-### 4.1 Base Card Component
-Create a reusable Card component (Card.jsx) that will serve as the foundation for all card types:
-- Styled container with background color, border radius, and box shadow
-- Header with title and icon
-- Content area for the main value and children components
-- Footer with change indicator (positive/negative) and change label
+test('component renders correctly', () => {
+  renderWithTheme(<YourComponent />);
+  expect(screen.getByText('Expected Text')).toBeInTheDocument();
+});
+```
 
-### 4.2 Specialized Card Components
-Create three specialized card components that extend the base Card:
+#### Testing Utility Functions
+```javascript
+test('utility function works correctly', () => {
+  const result = formatCurrency(1234.56);
+  expect(result).toBe('$1,234.56');
+});
+```
 
-1. StockCard.jsx:
-    - Displays stock/crypto indices with a line chart
-    - Shows current value, change percentage, and trend icon
-    - Uses LineChart component to visualize historical data
+### Test File Organization
+- Tests located in `src/__tests__/` directory
+- Component tests: `src/__tests__/components/[ComponentName]/[ComponentName].test.jsx`
+- Utility tests: `src/__tests__/[filename].test.js`
+- Mock files: `src/__mocks__/`
 
-2. RateCard.jsx:
-    - Displays interest rates with a line chart
-    - Shows current rate, change percentage, and percentage icon
-    - Uses LineChart component to visualize historical data
+### Adding New Tests
+1. Create test file in appropriate `__tests__` subdirectory
+2. Import testing utilities: `render`, `screen` from `@testing-library/react`
+3. For styled components, use `ThemeProvider` wrapper
+4. Use `data-testid` attributes for reliable element selection
+5. Test both happy path and edge cases
 
-3. MetricCard.jsx:
-    - Displays banking metrics with a line chart
-    - Shows current value, change percentage, and appropriate icon
-    - Uses LineChart component to visualize historical data
-    - Formats large numbers with abbreviations (K, M)
+## Code Style and Development Guidelines
 
-### 4.3 LineChart Component
-Create a LineChart component using Recharts:
-- Responsive container that adapts to parent size
-- Customizable line chart with options for grid, axes, tooltip, and legend
-- Custom tooltip component with styled container and formatted values
-- Support for multiple data series with different colors
+### ESLint Configuration
+- **Version**: ESLint 9 with flat config format
+- **Parser**: ES2020/latest with JSX support
+- **Plugins**: react-hooks, react-refresh
 
-### 4.4 Dashboard Component
-Create the main Dashboard component that brings everything together:
-- Styled container with appropriate spacing
-- Header with title and current date
-- Sections for different card types (Stock Indices, Crypto Indices, Interest Rates, Banking Metrics)
-- Market Overview section with tables for top gainers and losers
-- Market Sentiment display with bullish, neutral, and bearish percentages
+### Key ESLint Rules
+```javascript
+{
+  'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+  'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
+}
+```
 
-## Step 5: App Component and Final Setup
-1. Set up the App component to use ThemeProvider and render the Dashboard
-2. Configure the Vite build system in vite.config.js
-3. Add any necessary CSS in App.css or index.css
+### Component Structure
+```javascript
+// Standard component structure
+import React from 'react';
+import styled from 'styled-components';
 
-## Step 6: Common Issues and Solutions
+// Styled components at top
+const StyledComponent = styled.div`
+  // styles using theme props
+  color: ${props => props.theme.text.primary};
+`;
 
-### Issue 1: Styled Components Theme Not Working
-- Ensure ThemeProvider is wrapping your application
-- Check that you're accessing theme properties correctly with props.theme
+// Main component
+const ComponentName = ({ prop1, prop2 = 'default' }) => {
+  return (
+    <StyledComponent>
+      {/* JSX content */}
+    </StyledComponent>
+  );
+};
 
-### Issue 2: Charts Not Rendering Correctly
-- Verify that the data structure matches what Recharts expects
-- Ensure the ResponsiveContainer has a defined width and height
-- Check that the parent container has a defined height
+export default ComponentName;
+```
 
-### Issue 3: Formatting Issues with Numbers
-- Use Intl.NumberFormat for consistent currency formatting
-- Create helper functions for formatting different types of values (currency, percentage, large numbers)
+### Styled Components Patterns
+- Use theme props for consistent styling: `${props => props.theme.spacing.md}`
+- Handle prop forwarding with `.attrs()` for DOM attributes
+- Use semantic naming for styled components (e.g., `CardContainer`, `CardHeader`)
 
-### Issue 4: React Version Compatibility
-- If using React 19, ensure all dependencies are compatible
-- For React 18, adjust the package.json accordingly
+### File Organization
+```
+src/
+├── components/
+│   ├── Cards/           # Card components
+│   ├── Charts/          # Chart components
+│   └── Dashboard/       # Dashboard components
+├── data/                # Mock data and constants
+├── __tests__/           # Test files
+├── __mocks__/           # Mock files
+├── theme.js             # Theme configuration
+├── App.jsx              # Main app component
+└── main.jsx             # Entry point
+```
 
-### Issue 5: Vite Configuration
-- Enable HMR (Hot Module Replacement) for better development experience
-- Configure the server settings for detailed logging
+### Development Best Practices
+1. **Props Validation**: Handle non-number values gracefully in components
+2. **Theme Usage**: Always use theme props for consistent styling
+3. **Test Coverage**: Write tests for components, utilities, and edge cases
+4. **Error Handling**: Components should handle invalid props gracefully
+5. **Performance**: Use React.memo for expensive components if needed
 
-## Final Notes
-- The dashboard uses a dark theme throughout for a modern financial application look
-- All data is mock data and would need to be replaced with real API calls in a production app
-- The design is responsive and should work well on different screen sizes
-- The application uses styled-components for all styling, avoiding traditional CSS files
-- Icons are from react-icons library, specifically the FI (Feather Icons) set
+### Common Issues and Solutions
+- **Styled Components Props**: Use `.attrs()` to prevent DOM prop warnings
+- **Theme Provider**: Always wrap components in ThemeProvider for testing
+- **Module Imports**: Use ES6 imports consistently (project uses ES modules)
+- **JSX Transform**: Babel handles JSX transformation automatically
+
+### Coverage Thresholds
+Currently set to 0% (no minimum requirements), but coverage reports are generated in `coverage/` directory.
