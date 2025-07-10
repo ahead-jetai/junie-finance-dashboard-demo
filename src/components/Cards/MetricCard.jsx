@@ -6,6 +6,15 @@ import LineChart from '../Charts/LineChart';
 import { timeLabels } from '../../data/mockData';
 
 // Styled components
+/**
+ * Styled container component for charts.
+ *
+ * This container provides a predefined height and applies vertical margins
+ * dynamically based on the theme's spacing values. The `margin-top` and `margin-bottom`
+ * are set using the `md` and `sm` spacing tokens from the theme, respectively.
+ *
+ * The `height` is statically set to `120px`.
+ */
 const ChartContainer = styled.div`
   height: 120px;
   margin-top: ${props => props.theme.spacing.md};
@@ -13,6 +22,18 @@ const ChartContainer = styled.div`
 `;
 
 // Format large numbers with abbreviations
+/**
+ * Formats a number into a currency string with abbreviations for large numbers.
+ *
+ * Converts a given value into a string representing its currency format.
+ * If the number is in the thousands, it appends 'K' to the value.
+ * If the number is in the millions, it appends 'M' to the value.
+ * For smaller values, it formats the number as a standard currency.
+ * Returns '$0.00' if the input is not a valid number.
+ *
+ * @param {number|string} value - The input value to format, which can be a number or a string representation of a number.
+ * @returns {string} The formatted currency string, abbreviated for large numbers.
+ */
 const formatLargeNumber = (value) => {
   // Check if value is a number and convert it if it's not
   const numValue = typeof value === 'number' ? value : Number(value);
@@ -31,6 +52,21 @@ const formatLargeNumber = (value) => {
 };
 
 // MetricCard component
+/**
+ * MetricCard is a functional component that displays a card containing
+ * metric-related information, such as the current value, historical data
+ * as a line chart, and a comparison to the previous day.
+ *
+ * @param {Object} props - The properties object.
+ * @param {string} props.title - The title of the metric being displayed.
+ * @param {Object} props.data - The data related to the metric.
+ * @param {number} props.data.current - The current value of the metric.
+ * @param {number} props.data.change - The change in metric value compared to the previous day.
+ * @param {Array<number|string>} props.data.history - The historical values of the metric over time.
+ * @param {string} [props.color] - The color to use for the chart and icon. Defaults to green for positive change and red for negative change.
+ * @param {boolean} [props.isTransaction=false] - Determines the type of icon displayed. If true, an activity icon is shown. If false, a dollar-sign icon is shown.
+ * @returns {JSX.Element} A component that renders a metric card with a title, current value, change information, and a line chart.
+ */
 const MetricCard = ({ title, data, color, isTransaction = false }) => {
   // Prepare chart data
   const chartData = data.history.map((historyValue, index) => {

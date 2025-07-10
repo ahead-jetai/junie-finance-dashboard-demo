@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { FiArrowUp, FiArrowDown } from 'react-icons/fi';
 
 // Styled components
+/**
+ *
+ */
 const CardContainer = styled.div`
   background-color: ${props => props.theme.background.card};
   border-radius: ${props => props.theme.borderRadius.md};
@@ -19,6 +22,9 @@ const CardContainer = styled.div`
   }
 `;
 
+/**
+ *
+ */
 const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -26,12 +32,18 @@ const CardHeader = styled.div`
   margin-bottom: ${props => props.theme.spacing.md};
 `;
 
+/**
+ *
+ */
 const CardTitle = styled.h3`
   font-size: 1rem;
   color: ${props => props.theme.text.secondary};
   margin: 0;
 `;
 
+/**
+ *
+ */
 const CardIcon = styled.div.attrs(props => ({
   iconbg: props.iconBg
 }))`
@@ -46,22 +58,34 @@ const CardIcon = styled.div.attrs(props => ({
   opacity: 0.9;
 `;
 
+/**
+ *
+ */
 const CardContent = styled.div`
   flex: 1;
 `;
 
+/**
+ *
+ */
 const CardValue = styled.div`
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: ${props => props.theme.spacing.sm};
 `;
 
+/**
+ *
+ */
 const CardFooter = styled.div`
   display: flex;
   align-items: center;
   margin-top: ${props => props.theme.spacing.md};
 `;
 
+/**
+ *
+ */
 const ChangeIndicator = styled.div.attrs(props => ({
   ispositive: props.isPositive,
   isnegative: props.isNegative
@@ -78,18 +102,27 @@ const ChangeIndicator = styled.div.attrs(props => ({
   margin-right: ${props => props.theme.spacing.md};
 `;
 
+/**
+ *
+ */
 const ChangeIcon = styled.div`
   display: flex;
   align-items: center;
   margin-right: ${props => props.theme.spacing.xs};
 `;
 
+/**
+ *
+ */
 const ChangeLabel = styled.div`
   font-size: 0.75rem;
   color: ${props => props.theme.text.tertiary};
 `;
 
 // Card component
+/**
+ *
+ */
 const Card = ({
   title,
   value,
@@ -110,6 +143,8 @@ const Card = ({
   // Handle non-number values for change
   const numChange = typeof change === 'number' ? change : Number(change);
   const formattedChange = isNaN(numChange) ? '0.00' : Math.abs(numChange).toFixed(2);
+  
+
 
   return (
     <CardContainer>
